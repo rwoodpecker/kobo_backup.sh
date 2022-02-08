@@ -1,7 +1,8 @@
 #!/bin/bash
 
-BACKUPDIR="/Users/me/Downloads/kobo_backup"
-FOLDER_NAME="kobo-backup_"
-DATESTAMP="$(date +%Y-%m-%d_%H-%M)"
+kobo_location="/Volumes/KOBOeReader/"
+backup_dir="/Users/me/Downloads/kobo_backup"
+folder_prefix="kobo-backup"
+date_stamp="$(date +%Y-%m-%d_%H-%M)"
 
-cp -Rvp /Volumes/KOBOeReader/ $BACKUPDIR/$FOLDER_NAME$DATESTAMP
+cp -Rvp ${kobo_location} ${backup_dir}/${folder_prefix}_${date_stamp}
